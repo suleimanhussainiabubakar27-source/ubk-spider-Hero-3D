@@ -1,1 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>UBK SPIDER HERO 3D</title>
+<link rel="stylesheet" href="style.css?v=2">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="game"></div>
 
+<div id="hud" class="hidden">
+  <div class="chip">SCORE <b id="score">0</b></div>
+  <div class="chip">TOKENS <b id="tokens">0</b></div>
+  <div class="chip wide"><span id="obj"></span></div>
+  <button id="bPause" class="chip">II</button>
+</div>
+<div id="toast" class="hidden"></div>
+
+<div id="controls" class="hidden">
+  <div id="joyZone"><div id="joy"><div id="knob"></div></div></div>
+  <button id="bJump" class="act">JUMP</button>
+  <button id="bWeb" class="act web">WEB</button>
+  <button id="bRel" class="act small">CUT</button>
+</div>
+
+<div id="menu" class="overlay">
+  <h1>UBK<br>SPIDER HERO <span>3D</span></h1>
+  <button class="btn primary" data-a="play">PLAY GAME</button>
+  <button class="btn" data-a="missions">MISSIONS</button>
+  <button class="btn" data-a="settings">SETTINGS</button>
+  <button class="btn" data-a="how">HOW TO PLAY</button>
+</div>
+<div id="panel" class="overlay hidden"><div id="panelBody"></div><button class="btn" data-a="back">BACK</button></div>
+<div id="pause" class="overlay hidden">
+  <h2>PAUSED</h2>
+  <button class="btn primary" data-a="resume">RESUME</button>
+  <button class="btn" data-a="restart">RESTART</button>
+  <button class="btn" data-a="menu">MAIN MENU</button>
+</div>
+<div id="error" class="overlay hidden"><h2>WebGL not available</h2><p>Your browser or device could not start 3D graphics. Try Chrome, update Android System WebView, and enable hardware acceleration.</p></div>
+<script type="module" src="game.js?v=2"></script>
+</body>
+  </html>
